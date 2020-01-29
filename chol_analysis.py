@@ -29,6 +29,9 @@ def cholesterol_analysis():
                 print("The level is {}".format(answer))
         else:
                 print("Test not recognized")
+
+def new_feature():
+        pass
                 
 def interface():
         while True:
