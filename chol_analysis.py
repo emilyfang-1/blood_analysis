@@ -6,6 +6,7 @@ def HDL_analysis(HDL_level):
         else:
                 return "Low"
 
+
 def LDL_analysis(LDL_level):
         if LDL_level <= 130:
                 return "Normal"
@@ -15,7 +16,7 @@ def LDL_analysis(LDL_level):
                 return "High"
         else:
                 return "Very high"
-        
+
 
 def cholesterol_analysis():
         print("Cholesterol Analysis")
@@ -30,26 +31,29 @@ def cholesterol_analysis():
         else:
                 print("Test not recognized")
 
+
 def new_feature():
         pass
-                
+
+
 def name_function():
-	first_name = input("First name: ")
-	last_name = input("Last name: ")
-	return first_name, last_name
-	
+        first_name = input("First name: ")
+        last_name = input("Last name: ")
+        return first_name, last_name
+
+
 def interface():
         while True:
                 print("Cholesterol Calculator")
                 print("Options: ")
-                print(" 1 - Cholesterol Analysis") 
+                print(" 1 - Cholesterol Analysis")
                 print(" 9 - Quit")
                 choice = input("Enter your options: ")
                 if choice == "9":
                         return
                 elif choice == "1":
                         cholesterol_analysis()
-                        
-	
+
+
 if __name__ == "__main__":
         interface()
