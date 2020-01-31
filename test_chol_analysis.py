@@ -18,9 +18,10 @@ def test_LDL_analysis():
     expected = "High"
     assert answer == expected
 
+
 def test_fever_check():
-    from_chol_analysis import fever_check
-    new_data =
-    answer =
+    from chol_analysis import fever_check
+    new_data = [96.0, 100.5, 105.1, 97]
+    answer = fever_check(new_data)
+    expected = True
     assert answer == expected
-	
