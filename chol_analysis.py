@@ -41,6 +41,25 @@ def name_function():
         last_name = input("Last name: ")
         return first_name, last_name
 
+def age_function():
+        age = input("Age: ")
+        return age
+
+def collect_patient_data():
+        first_name, last_name = name_function()
+        full_name = first_name + " " + last_name
+        age = age_function()
+        patient_data = {"name": full_name,
+                        "age": age
+                        }
+        return patient_data
+
+def create_file(patient):
+        import json
+        filename = "patient_data.txt"
+        out_file = open(filename, "w")
+        json.dump(patient, out_file)
+        out_file.close()
 
 def interface():
         while True:
@@ -52,6 +71,8 @@ def interface():
                 if choice == "9":
                         return
                 elif choice == "1":
+                        new_patient = collect_patient_data()
+                        create_file(new_patient)
                         cholesterol_analysis()
 
 

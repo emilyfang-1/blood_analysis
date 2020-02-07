@@ -1,7 +1,23 @@
+import pytest
+
+
 def test_HDL_analysis_normal():
     from chol_analysis import HDL_analysis
     answer = HDL_analysis(80)
     expected = "Normal"
+    assert answer == expected
+
+
+@pytest.mark.parametrize("i, o", [
+    (100, 'Normal'),
+    (50, 'Borderline low'),
+    (20, 'Low'),
+    (55.5, 'Borderline low'),
+    ])
+def test_HDL_analysis_parametrize(i, o):
+    from chol_analysis import HDL_analysis
+    answer = HDL_analysis(i)
+    expected = o
     assert answer == expected
 
 
